@@ -1,4 +1,5 @@
 from .models import *
+from accountapp.models import *
 from rest_framework import serializers
 
 
@@ -74,7 +75,7 @@ class TOSerializer(serializers.ModelSerializer):
     machine = MachineSerializer(read_only=True)
     typeOfTO = TypeOfTOSerializer(read_only=True)
     maintenanceServiceCompany = FirstNameSerializer(read_only=True)
-    serviceCompany = FirstNameSerializer(read_only= rue)
+    serviceCompany = FirstNameSerializer(read_only=True)
 
     class Meta:
         model = TO
@@ -84,7 +85,7 @@ class TOSerializer(serializers.ModelSerializer):
 class ComplaintsSerializer(serializers.ModelSerializer):
     machine = MachineSerializer(read_only=True)
     nodeOfFailure = FailureTypeSerializer(read_only=True)
-    recoveryMethod = RecoveryMethod(read_only=True)
+    recoveryMethod = RecoveryMethodSerializer(read_only=True)
     serviceCompany = FirstNameSerializer(read_only=True)
 
     class Meta:

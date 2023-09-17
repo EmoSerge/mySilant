@@ -1,5 +1,5 @@
 from django.contrib import admin
-from models import *
+from .models import *
 
 
 @admin.register(FailureType)
@@ -72,7 +72,7 @@ class TOAdmin(admin.ModelAdmin):
 
 
 class MachineAdmin(admin.ModelAdmin):
-    list_display = ['factoryNumberOfMachine', 'dateOfShipment', 'Contract', 'consumer', 'operationAddress',
+    list_display = ['factoryNumberOfMachine', 'dateOfShipment', 'contract', 'consumer', 'operationAddress',
                     'get_client', 'get_serviceCompany']
 
     def get_fields(self, request, obj):

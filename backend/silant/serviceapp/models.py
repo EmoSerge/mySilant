@@ -1,6 +1,6 @@
 from django.db import models
 from django.urls import reverse
-from silant.account.models import User
+from accountapp.models import User
 
 
 class ModelOfTechnic(models.Model):
@@ -10,6 +10,7 @@ class ModelOfTechnic(models.Model):
 
     class Meta:
         verbose_name = 'Модель'
+        verbose_name_plural = 'Модели'
 
     def __str__(self):
         return f'{self.title}'
@@ -25,6 +26,7 @@ class ModelOfEngine(models.Model):
 
     class Meta:
         verbose_name = 'Модель двигателя'
+        verbose_name_plural = "Модели двигателей"
 
     def __str__(self):
         return f'{self.title}'
@@ -36,7 +38,8 @@ class ModelOfTransmission(models.Model):
     description = models.TextField(verbose_name='Описание')
 
     class Meta:
-        verbose_name = 'Модель Трансмиссии'
+        verbose_name = 'Модель трансмиссии'
+        verbose_name_plural = "Модели трансмиссий"
 
     def __str__(self):
         return f'{self.title}'
@@ -49,6 +52,7 @@ class ModelOfMainBridge(models.Model):
 
     class Meta:
         verbose_name = 'Модель ведущего моста'
+        verbose_name_plural = "Модели ведущих мостов"
 
     def __str__(self):
         return f'{self.title}'
@@ -61,6 +65,7 @@ class ModelOfSteerableBridge(models.Model):
 
     class Meta:
         verbose_name = 'Модель управляемого моста'
+        verbose_name_plural = "Модели управляемых мостов"
 
     def __str__(self):
         return f'{self.title}'
@@ -73,6 +78,7 @@ class TypeOfTO(models.Model):
 
     class Meta:
         verbose_name = 'Вид ТО'
+        verbose_name_plural = "Виды ТО"
 
     def __str__(self):
         return f'{self.title}'
@@ -85,6 +91,7 @@ class FailureType(models.Model):
 
     class Meta:
         verbose_name = 'Вид поломки'
+        verbose_name_plural = "Виды поломок"
 
     def __str__(self):
         return f'{self.title}'
@@ -96,7 +103,8 @@ class RecoveryMethod(models.Model):
     description = models.TextField(verbose_name='Описание')
 
     class Meta:
-        verbose_name = 'Способ Восстановления'
+        verbose_name = 'Способ ремонта'
+        verbose_name_plural = "Способы ремонта"
 
     def __str__(self):
         return f'{self.title}'
@@ -130,6 +138,7 @@ class Machine(models.Model):
 
     class Meta:
         verbose_name = 'Машина'
+        verbose_name_plural = "Машины"
         ordering = ['-dateOfShipment']
 
     def __str__(self):
@@ -150,7 +159,8 @@ class TO(models.Model):
 
     class Meta:
         verbose_name = 'Техническое Обслуживание'
-        ordering = ['-dateOfMaintenance']
+        verbose_name_plural = 'Техническое Обслуживание'
+        ordering = ['-dateOfTO']
 
     def __str__(self):
         return f'{self.pk}'
@@ -167,7 +177,7 @@ class Complaints(models.Model):
     usedSpareParts = models.CharField(max_length=128, verbose_name='Используемые запасные части', blank=True)
     dateOfRecovery = models.DateField(verbose_name='Дата восстановления')
     downtimeOfMachine = models.IntegerField(verbose_name='Время простоя', blank=True)
-    machine = models.ForeignKey(Machine, verbose_name='Машина', related_name='machine',
+    machine = models.ForeignKey(Machine, verbose_name='Машина', related_name='complaints_machine',
                                 on_delete=models.CASCADE)
     serviceCompany = models.ForeignKey(User, verbose_name='Сервисная компания',
                                        related_name='complaints_serviceCompany', on_delete=models.CASCADE)

@@ -8,6 +8,7 @@ import json
 
 from .serializers import *
 from .models import *
+from accountapp.models import *
 
 
 class ModelOfTechnicViewSet(viewsets.ModelViewSet):
