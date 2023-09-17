@@ -53,22 +53,20 @@ class ModelOfMachineAdmin(admin.ModelAdmin):
 class TOAdmin(admin.ModelAdmin):
     fields = ['machine', 'typeOfTO', 'dateOfTO', 'operatingTime', 'numberOrderWork', 'dateOrderWork',
               'maintenanceServiceCompany', 'serviceCompany']
-    list_display = ['machine', 'typeOfTO', 'maintenance_made', 'service_Company']
+    list_display = ['machine', 'typeOfTO', 'operatingTime', 'maintenance_made', 'service_company']
 
     def maintenance_made(self, obj):
         machine = obj.machine
         SO = Machine.objects.get(factoryNumberOfMachine=machine)
-
-        print(SO.client.id, '-', obj.maintenanceServiceCompany.id)
         if SO.client_id == obj.maintenanceServiceCompany.id:
             return 'Самостоятельно'
         return obj.maintenanceServiceCompany.first_name
 
-    def service_Company(self, obj):
+    def service_company(self, obj):
         return obj.serviceCompany.first_name
 
     maintenance_made.short_description = 'Организация, проводившая ТО'
-    service_Company.short_description = 'Сервисная компания'
+    service_company.short_description = 'Сервисная компания'
 
 
 class MachineAdmin(admin.ModelAdmin):

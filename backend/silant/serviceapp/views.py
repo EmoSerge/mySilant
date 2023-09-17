@@ -162,18 +162,17 @@ class TOViewSet(viewsets.ModelViewSet):
     def get_queryset(self):
         user = self.request.user
 
-        if user.is_anonymous:
-            return ''
-
         if user.is_superuser or user.users.role == 'MR':
             return TO.objects.all()
 
-        if user.users.role == 'CL':
+        elif user.users.role == 'CL':
             machine = Machine.objects.filter(client=user)
             return TO.objects.filter(machine__in=machine)
 
-        if user.users.role == 'SO':
+        elif user.users.role == 'SO':
             return TO.objects.filter(Q(serviceCompany=user) | Q(maintenanceServiceCompany=user))
+        else:
+            return ''
 
 
 class ComplaintsViewSet(viewsets.ModelViewSet):
