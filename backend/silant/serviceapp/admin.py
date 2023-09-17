@@ -79,9 +79,11 @@ class MachineAdmin(admin.ModelAdmin):
         print(request)
         return super().get_fields(request, obj)
 
+    @admin.display(description='Клиент')
     def get_client(self, obj):
         return obj.client.first_name
 
+    @admin.display(description='Сервисная компания')
     def get_serviceCompany(self, obj):
         return obj.serviceCompany.first_name
 

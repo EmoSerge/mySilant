@@ -5,7 +5,7 @@ from accountapp.models import User
 
 class ModelOfTechnic(models.Model):
     title = models.CharField(max_length=128, verbose_name='Модель')
-    slug = models.SlugField(max_length=128, verbose_name='Название', blank=True)
+    slug = models.SlugField(max_length=128, verbose_name='Артикул', blank=True)
     description = models.TextField(verbose_name='Описание')
 
     class Meta:
@@ -21,7 +21,7 @@ class ModelOfTechnic(models.Model):
 
 class ModelOfEngine(models.Model):
     title = models.CharField(max_length=128, verbose_name='Модель двигателя')
-    slug = models.SlugField(max_length=128, verbose_name='Название', blank=True)
+    slug = models.SlugField(max_length=128, verbose_name='Артикул', blank=True)
     description = models.TextField(verbose_name='Описание')
 
     class Meta:
@@ -34,7 +34,7 @@ class ModelOfEngine(models.Model):
 
 class ModelOfTransmission(models.Model):
     title = models.CharField(max_length=128, verbose_name='Модель трансмиссии')
-    slug = models.SlugField(max_length=128, verbose_name='Название', blank=True)
+    slug = models.SlugField(max_length=128, verbose_name='Артикул', blank=True)
     description = models.TextField(verbose_name='Описание')
 
     class Meta:
@@ -47,7 +47,7 @@ class ModelOfTransmission(models.Model):
 
 class ModelOfMainBridge(models.Model):
     title = models.CharField(max_length=128, verbose_name='Модель ведущего моста')
-    slug = models.SlugField(max_length=128, verbose_name='Название', blank=True)
+    slug = models.SlugField(max_length=128, verbose_name='Артикул', blank=True)
     description = models.TextField(verbose_name='Описание')
 
     class Meta:
@@ -60,7 +60,7 @@ class ModelOfMainBridge(models.Model):
 
 class ModelOfSteerableBridge(models.Model):
     title = models.CharField(max_length=128, verbose_name='Модель управляемого моста')
-    slug = models.SlugField(max_length=128, verbose_name='Название', blank=True)
+    slug = models.SlugField(max_length=128, verbose_name='Артикул', blank=True)
     description = models.TextField(verbose_name='Описание')
 
     class Meta:
@@ -73,7 +73,7 @@ class ModelOfSteerableBridge(models.Model):
 
 class TypeOfTO(models.Model):
     title = models.CharField(max_length=128, verbose_name='Вид ТО')
-    slug = models.SlugField(max_length=128, verbose_name='Название', blank=True)
+    slug = models.SlugField(max_length=128, verbose_name='Артикул', blank=True)
     description = models.TextField(verbose_name='Описание')
 
     class Meta:
@@ -85,8 +85,8 @@ class TypeOfTO(models.Model):
 
 
 class FailureType(models.Model):
-    title = models.CharField(max_length=128, verbose_name='Характер отказа')
-    slug = models.SlugField(max_length=128, verbose_name='Название', blank=True)
+    title = models.CharField(max_length=128, verbose_name='Узел отказа')
+    slug = models.SlugField(max_length=128, verbose_name='Артикул', blank=True)
     description = models.TextField(verbose_name='Описание')
 
     class Meta:
@@ -99,7 +99,7 @@ class FailureType(models.Model):
 
 class RecoveryMethod(models.Model):
     title = models.CharField(max_length=128, verbose_name='Способ восстановления')
-    slug = models.SlugField(max_length=128, verbose_name='Название', blank=True)
+    slug = models.SlugField(max_length=128, verbose_name='Артикул', blank=True)
     description = models.TextField(verbose_name='Описание')
 
     class Meta:
@@ -127,7 +127,7 @@ class Machine(models.Model):
     modelOfSteerableBridge = models.ForeignKey(ModelOfSteerableBridge, verbose_name='Модель управляемого моста',
                                                related_name='ModelOfSteerableBridge', on_delete=models.CASCADE)
     factoryNumberOfSteerableBridge = models.CharField(max_length=128, verbose_name='Зав. № управляемого моста')
-    contract = models.CharField(max_length=128, verbose_name='Договор поставки №, дата')
+    contract = models.CharField(max_length=128, verbose_name='Договор поставки №')
     dateOfShipment = models.DateField(verbose_name='Дата отгрузки с завода')
     consumer = models.CharField(max_length=128, verbose_name='Грузополучатель')
     operationAddress = models.CharField(max_length=128, verbose_name='Адрес поставки')
