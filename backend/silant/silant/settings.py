@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-from datetime import timedelta
+
 from pathlib import Path
 import os
 from dotenv import load_dotenv
@@ -48,13 +48,16 @@ INSTALLED_APPS = [
     'accountapp',
     'serviceapp',
 
-    'allauth',
-    'allauth.account',
-
     'rest_framework',
     'corsheaders',
-    'rest_framework_simplejwt',
     'drf_yasg',
+
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+
+
+
 ]
 
 MIDDLEWARE = [
@@ -74,7 +77,7 @@ ROOT_URLCONF = 'silant.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates'), os.path.join(BASE_DIR, 'templates', 'allauth')],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -146,20 +149,25 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 AUTHENTICATION_BACKENDS = [
 
     'django.contrib.auth.backends.ModelBackend',
+    'allauth.account.auth_backends.AuthenticationBackend',
 ]
 
-ACCOUNT_ADAPTER = 'account.adapter.CustomAdapter'
+SITE_ID = 1
+
+ACCOUNT_ADAPTER = 'accountapp.adapter.CustomAdapter'
 ACCOUNT_EMAIL_REQUIRED = False
 ACCOUNT_USERNAME_REQUIRED = True
 ACCOUNT_AUTHENTICATION_METHOD = 'username'
 ACCOUNT_USER_MODEL_EMAIL_FIELD = None
 
-LOGIN_REDIRECT_URL = '/'
-LOGOUT_REDIRECT_URL = '/account/login/'
+LOGIN_REDIRECT_URL = '/swagger'
+LOGOUT_REDIRECT_URL = 'api/v1/drf-auth/'
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': [
-        'rest_framework_simplejwt.authentication.JWTAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication'
+
 
     ],
     'DEFAULT_PARSER_CLASSES': [
@@ -168,10 +176,7 @@ REST_FRAMEWORK = {
 
 }
 
-SIMPLE_JWT = {
-    'ACCESS_TOKEN_LIFETIME': timedelta(days=1),
-    'REFRESH_TOKEN_LIFETIME': timedelta(days=15)
-}
+
 
 CORS_ALLOWED_ORIGINS = [
     'http://127.0.0.1:3000',

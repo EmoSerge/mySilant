@@ -1,9 +1,11 @@
 from django.db.models import Q
 from rest_framework import viewsets, status
+from rest_framework.decorators import authentication_classes
 from rest_framework.status import HTTP_401_UNAUTHORIZED
 from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated, DjangoModelPermissionsOrAnonReadOnly, DjangoModelPermissions
 from datetime import datetime
+from rest_framework.authentication import SessionAuthentication, BasicAuthentication
 import json
 
 from .serializers import *
@@ -11,6 +13,7 @@ from .models import *
 from accountapp.models import *
 
 
+@authentication_classes([SessionAuthentication, BasicAuthentication])
 class ModelOfTechnicViewSet(viewsets.ModelViewSet):
     permission_classes = (IsAuthenticated,)
     serializer_class = ModelOfTechnicSerializer
@@ -33,6 +36,7 @@ class ModelOfTechnicViewSet(viewsets.ModelViewSet):
         return Response(response, HTTP_401_UNAUTHORIZED)
 
 
+@authentication_classes([SessionAuthentication, BasicAuthentication])
 class ModelOfEngineViewSet(viewsets.ModelViewSet):
     permission_classes = (IsAuthenticated,)
     serializer_class = ModelOfEngineSerializer
@@ -40,6 +44,7 @@ class ModelOfEngineViewSet(viewsets.ModelViewSet):
     queryset = ModelOfEngine.objects.all()
 
 
+@authentication_classes([SessionAuthentication, BasicAuthentication])
 class ModelOfTransmissionViewSet(viewsets.ModelViewSet):
     permission_classes = (IsAuthenticated,)
     serializer_class = ModelOfTransmissionSerializer
@@ -47,6 +52,7 @@ class ModelOfTransmissionViewSet(viewsets.ModelViewSet):
     queryset = ModelOfTransmission.objects.all()
 
 
+@authentication_classes([SessionAuthentication, BasicAuthentication])
 class ModelOfMainBridgeViewSet(viewsets.ModelViewSet):
     permission_classes = (IsAuthenticated,)
     serializer_class = ModelOfMainBridgeSerializer
@@ -54,6 +60,7 @@ class ModelOfMainBridgeViewSet(viewsets.ModelViewSet):
     queryset = ModelOfMainBridge.objects.all()
 
 
+@authentication_classes([SessionAuthentication, BasicAuthentication])
 class ModelOfSteerableBridgeViewSet(viewsets.ModelViewSet):
     permission_classes = (IsAuthenticated,)
     serializer_class = ModelOfSteerableBridgeSerializer
@@ -61,6 +68,7 @@ class ModelOfSteerableBridgeViewSet(viewsets.ModelViewSet):
     queryset = ModelOfSteerableBridge.objects.all()
 
 
+@authentication_classes([SessionAuthentication, BasicAuthentication])
 class TypeofTOViewSet(viewsets.ModelViewSet):
     permission_classes = (IsAuthenticated,)
     serializer_class = TypeOfTOSerializer
@@ -68,6 +76,7 @@ class TypeofTOViewSet(viewsets.ModelViewSet):
     queryset = TypeOfTO.objects.all()
 
 
+@authentication_classes([SessionAuthentication, BasicAuthentication])
 class FailureTypeViewSet(viewsets.ModelViewSet):
     permission_classes = (IsAuthenticated,)
     serializer_class = FailureTypeSerializer
@@ -75,6 +84,7 @@ class FailureTypeViewSet(viewsets.ModelViewSet):
     queryset = FailureType.objects.all()
 
 
+@authentication_classes([SessionAuthentication, BasicAuthentication])
 class RecoveryMethodViewSet(viewsets.ModelViewSet):
     permission_classes = (IsAuthenticated,)
     serializer_class = RecoveryMethodSerializer
@@ -82,6 +92,7 @@ class RecoveryMethodViewSet(viewsets.ModelViewSet):
     queryset = RecoveryMethod.objects.all()
 
 
+@authentication_classes([SessionAuthentication, BasicAuthentication])
 class MachineViewSet(viewsets.ModelViewSet):
     permission_classes = (DjangoModelPermissionsOrAnonReadOnly,)
     serializer_class = MachineSerializer
@@ -131,6 +142,7 @@ class MachineViewSet(viewsets.ModelViewSet):
             return Machine.objects.filter(serviceCompany=user)
 
 
+@authentication_classes([SessionAuthentication, BasicAuthentication])
 class TOViewSet(viewsets.ModelViewSet):
     permission_classes = (DjangoModelPermissions,)
     serializer_class = TOSerializer
@@ -175,6 +187,7 @@ class TOViewSet(viewsets.ModelViewSet):
             return ''
 
 
+@authentication_classes([SessionAuthentication, BasicAuthentication])
 class ComplaintsViewSet(viewsets.ModelViewSet):
     permission_classes = (DjangoModelPermissions,)
     serializer_class = ComplaintsSerializer
@@ -217,6 +230,7 @@ class ComplaintsViewSet(viewsets.ModelViewSet):
             return Complaints.objects.filter(machine__in=machines)
 
 
+@authentication_classes([SessionAuthentication, BasicAuthentication])
 class DetailTO(viewsets.ModelViewSet):
     permission_classes = (DjangoModelPermissions,)
     http_method_names = ['get',]

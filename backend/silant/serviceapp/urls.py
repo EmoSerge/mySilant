@@ -19,5 +19,6 @@ router.register(r'failureType', FailureTypeViewSet, basename='failureType')
 router.register(r'recoveryMethod', RecoveryMethodViewSet, basename='recoveryMethod')
 
 urlpatterns = [
-    path('', include(router.urls))
+    path('', include(router.urls)),
+
 ]
