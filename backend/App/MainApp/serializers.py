@@ -43,7 +43,7 @@ class FirstNameSerializer(serializers.ModelSerializer):
 class TypeOfMaintenanceSerializer(serializers.ModelSerializer):
     class Meta:
         model = TypeOfMaintenance
-        fields = ('__all__')
+        fields = '__all__'
 
 
 class TypeOfFailureSerializer(serializers.ModelSerializer):
@@ -68,11 +68,7 @@ class MachineSerializer(serializers.ModelSerializer):
     serviceCompany = FirstNameSerializer(read_only = True)
     class Meta:
         model = Machine
-        fields = ['factoryNumberOfMachine', 'modelOfMachine', 'modelOfEngine', \
-                'factoryNumberOfEngine', 'modelOfTransmission', 'factoryNumberOfTransmission', \
-                'modelOfMainAxle', 'factoryNumberOfMainAxle', 'modelOfSteeringAxle', \
-                'factoryNumberOfSteeringAxle', 'supplyContract', 'dateOfShipment', \
-                'consumer', 'operationAddress', 'additionalOptions', 'client', 'serviceCompany']        
+        fields = '__all__'
 
         
 class MaintenanceSerializer(serializers.ModelSerializer):
@@ -82,8 +78,7 @@ class MaintenanceSerializer(serializers.ModelSerializer):
     serviceCompany = FirstNameSerializer(read_only = True)
     class Meta:
         model = Maintenance
-        fields = ['id', 'dateOfMaintenance', 'operatingTime', 'numberOrderWork', \
-            'dateOrderWork', 'maintenanceServiceCompany', 'serviceCompany', 'typeOfMaintenance', 'machine']
+        fields = '__all__'
         
         
 class ComplaintsSerializer(serializers.ModelSerializer):
@@ -93,10 +88,7 @@ class ComplaintsSerializer(serializers.ModelSerializer):
     serviceCompany = FirstNameSerializer(read_only = True)
     class Meta:
         model = Complaints
-        fields = ['id', 'machine', 'dateOfFailure', 'operatingTime', 'nodeOfFailure', \
-            'descriptionOfFailure', 'recoveryMethod', 'usedSpareParts', 'dateOfRecovery', \
-                'downtimeOfMachine', 'serviceCompany']
-
+        fields = '__all__'
 
 class DetailedMachineSerilizer(serializers.ModelSerializer):
     # complaints_machine = serializers.StringRelatedField(many = True)

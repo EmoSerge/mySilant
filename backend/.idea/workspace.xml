@@ -2,99 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="86d76216-ebd0-47be-bfe8-803456c66b07" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../frontend/app/src/Store/Slicers/AuthSlicer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/app/src/Store/Slicers/ComplaintsSlicer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/app/src/Store/Slicers/DetailedSlicer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/app/src/Store/Slicers/EngineSlicer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/app/src/Store/Slicers/FailureTypeSlicer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/app/src/Store/Slicers/MachineSlicer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/app/src/Store/Slicers/MainBridgeSlicer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/app/src/Store/Slicers/RecoveryMethodSlicer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/app/src/Store/Slicers/SteerableBridgeSlicer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/app/src/Store/Slicers/TOSlicer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/app/src/Store/Slicers/TechnicSlicer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/app/src/Store/Slicers/TransmissionSlicer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/app/src/Store/Slicers/TypeOfTOSlicer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/app/src/Store/Slicers/UserInfoSlicer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/app/src/Store/Slicers/UsersSlicer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/app/src/Store/Store.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/app/src/Theme/Theme.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/app/src/components/CustomContainer/CustomContainer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/app/src/components/DataB/DataB.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/app/src/components/DataInsertPage/AddComplaints.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/app/src/components/DataInsertPage/AddMachine.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/app/src/components/DataInsertPage/AddMaintenance.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/app/src/components/DataInsertPage/DataInsertPage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/app/src/components/Footer/Footer.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/app/src/components/Header/Header.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/app/src/components/Login/Login.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/app/src/components/Logout/Logout.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/app/src/components/MainPage/Authorized.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/app/src/components/MainPage/MainPage.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/app/src/components/MainPage/MainPageTable/Filters/ComplaintsFilters.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/app/src/components/MainPage/MainPageTable/Filters/InfoFilters.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/app/src/components/MainPage/MainPageTable/Filters/MaintenanceFilters.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/app/src/components/MainPage/MainPageTable/MainPageTable.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/app/src/components/MainPage/MainPageTable/MainPageTable.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/app/src/components/MainPage/MainPageTable/Tabs/Complaints.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/app/src/components/MainPage/MainPageTable/Tabs/Info.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/app/src/components/MainPage/MainPageTable/Tabs/Maintenance.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/app/src/components/MainPage/Unauthorized.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/app/src/components/ProtectedRoutes/ProtectedRoutes.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../frontend/app/src/index.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/backend.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requriments.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/silant/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/silant/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/silant/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/silant/.idea/silant.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/silant/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/silant/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/silant/accountapp/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/silant/accountapp/adapter.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/silant/accountapp/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/silant/accountapp/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/silant/accountapp/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/silant/accountapp/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/silant/accountapp/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/silant/accountapp/serializers.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/silant/accountapp/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/silant/accountapp/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/silant/db.sqlite3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/silant/manage.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/silant/serviceapp/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/silant/serviceapp/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/silant/serviceapp/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/silant/serviceapp/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/silant/serviceapp/migrations/0002_alter_failuretype_options_alter_machine_options_and_more.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/silant/serviceapp/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/silant/serviceapp/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/silant/serviceapp/serializers.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/silant/serviceapp/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/silant/serviceapp/views.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/silant/silant/.env" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/silant/silant/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/silant/silant/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/silant/silant/.idea/silant.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/silant/silant/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/silant/silant/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/silant/silant/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/silant/silant/asgi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/silant/silant/settings.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/silant/silant/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/silant/silant/wsgi.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/app/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/app/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/app/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/app/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/app/src/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/app/src/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/logo.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/App/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/App/App/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/MainApp/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/App/MainApp/serializers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/MainApp/tests.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/MainApp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/App/MainApp/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/static/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/static/fonts/PT-Astra-Sans_Bold-Italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/static/fonts/PT-Astra-Sans_Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/static/fonts/PT-Astra-Sans_Italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/static/fonts/PT-Astra-Sans_Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/static/js/authorized.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/static/js/scripts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/templates/allauth/account/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/templates/allauth/account/logout.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/templates/authorized.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/templates/base.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/templates/detail.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/templates/main_page.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/templates/table/complaints_table.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/templates/table/machines_table.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/templates/table/maintenances_table.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/templates/unauthorized.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/README.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -286,11 +216,22 @@
       <workItem from="1695062668031" duration="488000" />
       <workItem from="1695469327217" duration="6408000" />
       <workItem from="1695542634664" duration="3280000" />
-      <workItem from="1695566991532" duration="617000" />
+      <workItem from="1695566991532" duration="2679000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

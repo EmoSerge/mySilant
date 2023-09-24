@@ -8,7 +8,6 @@ from django.db.models import Q
 import json
 from datetime import datetime
 
-# Create your views here.
 
 class MachineViewSet(viewsets.ModelViewSet):
     permission_classes = (DjangoModelPermissionsOrAnonReadOnly,)
@@ -18,49 +17,38 @@ class MachineViewSet(viewsets.ModelViewSet):
     def create(self, request, *args, **kwargs):
         if request.method == 'POST':
             data = json.loads(self.request.data['body'])
-            # data = self.request.data
             
-            newMachine = {
+            new_machine = {
                 'factoryNumberOfMachine': data['factoryNumberOfMachine'],
-                'modelOfMachine': ModelOfMachine.objects.get(title = data['modelOfMachine']['title']),
-                'modelOfEngine': ModelOfEngine.objects.get(title = data['modelOfEngine']['title']),
+                'modelOfMachine': ModelOfMachine.objects.get(title=data['modelOfMachine']['title']),
+                'modelOfEngine': ModelOfEngine.objects.get(title=data['modelOfEngine']['title']),
                 'factoryNumberOfEngine': data['factoryNumberOfEngine'],
-                'modelOfTransmission': ModelOfTransmission.objects.get(title = data['modelOfTransmission']['title']),
+                'modelOfTransmission': ModelOfTransmission.objects.get(title=data['modelOfTransmission']['title']),
                 'factoryNumberOfTransmission': data['factoryNumberOfTransmission'],
-                'modelOfMainAxle': ModelOfMainAxle.objects.get(title = data['modelOfMainAxle']['title']),
+                'modelOfMainAxle': ModelOfMainAxle.objects.get(title=data['modelOfMainAxle']['title']),
                 'factoryNumberOfMainAxle': data['factoryNumberOfMainAxle'],
-                'modelOfSteeringAxle': ModelOfSteeringAxle.objects.get(title = data['modelOfSteeringAxle']['title']),
+                'modelOfSteeringAxle': ModelOfSteeringAxle.objects.get(title=data['modelOfSteeringAxle']['title']),
                 'factoryNumberOfSteeringAxle': data['factoryNumberOfSteeringAxle'],
                 'supplyContract': data['supplyContract'],
                 'dateOfShipment': data['dateOfShipment'],
                 'consumer': data['consumer'],
                 'additionalOptions': data['additionalOptions'],
                 'operationAddress': data['operationAddress'],
-                'client': User.objects.get(first_name = data['client']['first_name']),
-                'serviceCompany': User.objects.get(first_name = data['serviceCompany']['first_name']),
+                'client': User.objects.get(first_name=data['client']['first_name']),
+                'serviceCompany': User.objects.get(first_name=data['serviceCompany']['first_name']),
             }
-            
-            # print(ModelOfMachine.objects.get(title = data['modelOfMachine']['title']))
-            Machine.objects.create(**newMachine)
-            # machine.save()
+            Machine.objects.create(**new_machine)
             res = {'created': True}
             return Response(res, status=status.HTTP_200_OK)
             
     def get_queryset(self):
         user = self.request.user
-        
-        if user.is_anonymous:
-            return Machine.objects.all()
-        
-        if user.is_superuser or user.users.role == 'MR':
-            return Machine.objects.all()
-        
         if user.users.role == 'CR':
-            return Machine.objects.filter(client = user)
-        
-        if user.users.role == 'SC':
-            return Machine.objects.filter(serviceCompany = user)
-
+            return Machine.objects.filter(client=user)
+        elif user.users.role == 'SC':
+            return Machine.objects.filter(serviceCompany=user)
+        else:
+            return Machine.objects.all()
 
 
 class MaintenanceViewSet(viewsets.ModelViewSet):
@@ -71,7 +59,7 @@ class MaintenanceViewSet(viewsets.ModelViewSet):
     def create(self, request, *args, **kwargs):
         if self.request.method == 'POST':
             data = self.request.data
-            serviceCompany = Machine.objects.get(factoryNumberOfMachine = data['modelOfMachine'])
+            serviceCompany = Machine.objects.get(factoryNumberOfMachine=data['modelOfMachine'])
             if data['serviceCompany'] == "Самостоятельно":
                 maintenanceServiceCompany = serviceCompany.client
             else:
@@ -93,19 +81,15 @@ class MaintenanceViewSet(viewsets.ModelViewSet):
     
     def get_queryset(self):
         user = self.request.user
-        
-        if user.is_anonymous:
-            return ''
-             
         if user.is_superuser or user.users.role == 'MR':
             return Maintenance.objects.all()
-        
-        if user.users.role == 'CR':
-            machine = Machine.objects.filter(client = user)
-            return Maintenance.objects.filter(machine__in = machine)
-        
-        if user.users.role == 'SC':
-            return Maintenance.objects.filter(Q(serviceCompany = user) | Q(maintenanceServiceCompany = user))
+        elif user.users.role == 'CR':
+            machine = Machine.objects.filter(client=user)
+            return Maintenance.objects.filter(machine__in=machine)
+        elif user.users.role == 'SC':
+            return Maintenance.objects.filter(Q(serviceCompany=user) | Q(maintenanceServiceCompany=user))
+        else:
+            return ''
 
 
 class ComplaintsViewSet(viewsets.ModelViewSet):
@@ -128,27 +112,22 @@ class ComplaintsViewSet(viewsets.ModelViewSet):
                 'serviceCompany': User.objects.get(first_name = self.request.data['serviceCompany'])
             }
             Complaints.objects.create(**newComplaints)
-            return Response({'message': 'Запись Добавлен'}, status=status.HTTP_201_CREATED)
-        # return super().create(request, *args, **kwargs)
+            return Response({'message': 'Запись добавлена'}, status=status.HTTP_201_CREATED)
     
     def get_queryset(self):
         user = self.request.user
-        
-        if user.is_anonymous:
-            return ''
-             
         if user.is_superuser or user.users.role == 'MR':
             return Complaints.objects.all()
-        
-        if user.users.role == 'CR':
-            machine = Machine.objects.filter(client = user)
-            return Complaints.objects.filter(machine__in = machine)
-        
-        if user.users.role == 'SC':
-            maintenanceOfMachines = Maintenance.objects.filter(Q(serviceCompany = user) | Q(maintenanceServiceCompany = user)).values_list('machine_id', flat=True)
-            machine = Machine.objects.filter(serviceCompany = user)
-            machines = Machine.objects.filter(factoryNumberOfMachine__in = maintenanceOfMachines)
-            return Complaints.objects.filter(machine__in = machines)
+        elif user.users.role == 'CR':
+            machine = Machine.objects.filter(client=user)
+            return Complaints.objects.filter(machine__in=machine)
+        elif user.users.role == 'SC':
+            maintenanceOfMachines = Maintenance.objects.filter(Q(serviceCompany=user) | Q(maintenanceServiceCompany=user)).values_list('machine_id', flat=True)
+            machine = Machine.objects.filter(serviceCompany=user)
+            machines = Machine.objects.filter(factoryNumberOfMachine__in=maintenanceOfMachines)
+            return Complaints.objects.filter(machine__in=machines)
+        else:
+            return ''
  
 
 class DetailMaintenance(viewsets.ModelViewSet):
@@ -157,6 +136,3 @@ class DetailMaintenance(viewsets.ModelViewSet):
     queryset = Machine.objects.all()
     serializer_class = DetailedMachineSerilizer
    
-
-        
-    
