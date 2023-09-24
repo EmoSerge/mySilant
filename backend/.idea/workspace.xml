@@ -1,14 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="33a204ca-f6d3-412d-86ca-438f9abcaf90" name="Changes" comment="">
+    <list default="true" id="86d76216-ebd0-47be-bfe8-803456c66b07" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../frontend/app/src/Store/Slicers/AuthSlicer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/app/src/Store/Slicers/ComplaintsSlicer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/app/src/Store/Slicers/DetailedSlicer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/app/src/Store/Slicers/EngineSlicer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/app/src/Store/Slicers/FailureTypeSlicer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/app/src/Store/Slicers/MachineSlicer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/app/src/Store/Slicers/MainBridgeSlicer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/app/src/Store/Slicers/RecoveryMethodSlicer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/app/src/Store/Slicers/SteerableBridgeSlicer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/app/src/Store/Slicers/TOSlicer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/app/src/Store/Slicers/TechnicSlicer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/app/src/Store/Slicers/TransmissionSlicer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/app/src/Store/Slicers/TypeOfTOSlicer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/app/src/Store/Slicers/UserInfoSlicer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/app/src/Store/Slicers/UsersSlicer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/app/src/Store/Store.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/app/src/Theme/Theme.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/app/src/components/CustomContainer/CustomContainer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/app/src/components/DataB/DataB.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/app/src/components/DataInsertPage/AddComplaints.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/app/src/components/DataInsertPage/AddMachine.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/app/src/components/DataInsertPage/AddMaintenance.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/app/src/components/DataInsertPage/DataInsertPage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/app/src/components/Footer/Footer.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/app/src/components/Header/Header.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/app/src/components/Login/Login.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/app/src/components/Logout/Logout.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/app/src/components/MainPage/Authorized.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/app/src/components/MainPage/MainPage.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/app/src/components/MainPage/MainPageTable/Filters/ComplaintsFilters.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/app/src/components/MainPage/MainPageTable/Filters/InfoFilters.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/app/src/components/MainPage/MainPageTable/Filters/MaintenanceFilters.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/app/src/components/MainPage/MainPageTable/MainPageTable.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/app/src/components/MainPage/MainPageTable/MainPageTable.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/app/src/components/MainPage/MainPageTable/Tabs/Complaints.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/app/src/components/MainPage/MainPageTable/Tabs/Info.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/app/src/components/MainPage/MainPageTable/Tabs/Maintenance.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/app/src/components/MainPage/Unauthorized.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/app/src/components/ProtectedRoutes/ProtectedRoutes.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../frontend/app/src/index.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/backend.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/backend.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/silant/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/silant/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/silant/serviceapp/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/silant/serviceapp/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/silant/serviceapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/silant/serviceapp/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/silant/silant/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/silant/silant/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/silant/silant/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/silant/silant/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requriments.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/silant/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/silant/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/silant/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/silant/.idea/silant.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/silant/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/silant/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/silant/accountapp/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/silant/accountapp/adapter.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/silant/accountapp/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/silant/accountapp/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/silant/accountapp/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/silant/accountapp/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/silant/accountapp/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/silant/accountapp/serializers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/silant/accountapp/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/silant/accountapp/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/silant/db.sqlite3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/silant/manage.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/silant/serviceapp/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/silant/serviceapp/admin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/silant/serviceapp/apps.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/silant/serviceapp/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/silant/serviceapp/migrations/0002_alter_failuretype_options_alter_machine_options_and_more.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/silant/serviceapp/migrations/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/silant/serviceapp/models.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/silant/serviceapp/serializers.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/silant/serviceapp/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/silant/serviceapp/views.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/silant/silant/.env" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/silant/silant/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/silant/silant/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/silant/silant/.idea/silant.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/silant/silant/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/silant/silant/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/silant/silant/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/silant/silant/asgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/silant/silant/settings.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/silant/silant/urls.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/silant/silant/wsgi.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/app/src/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/app/src/logo.svg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +107,7 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2VWdq3aPj4CUMQYBemUsSNGDGk1" />
+  <component name="ProjectId" id="2VJ32OOMoCAUqYIvTkM71GE9H5h" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -31,18 +117,11 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.templateLanguages.PyTemplateLanguageModulesConfigurable&quot;
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
   }
 }</component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Projects\mySilant\backend\silant\templates\allauth" />
-    </key>
-  </component>
   <component name="RunManager">
-    <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+    <configuration default="true" type="DjangoTestsConfigurationType">
       <module name="backend" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -50,12 +129,45 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
+      <module name="backend" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <module name="backend" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -64,32 +176,121 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration default="true" type="Python.FlaskServer">
+      <module name="backend" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Tox" factoryName="Tox">
+      <module name="backend" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docs" factoryName="Docutils task">
+      <module name="backend" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="docutils_input_file" value="" />
+      <option name="docutils_output_file" value="" />
+      <option name="docutils_params" value="" />
+      <option name="docutils_task" value="" />
+      <option name="docutils_open_in_browser" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="docs" factoryName="Sphinx task">
+      <module name="backend" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="docutils_input_file" value="" />
+      <option name="docutils_output_file" value="" />
+      <option name="docutils_params" value="" />
+      <option name="docutils_task" value="" />
+      <option name="docutils_open_in_browser" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Autodetect">
+      <module name="backend" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <module name="backend" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="33a204ca-f6d3-412d-86ca-438f9abcaf90" name="Changes" comment="" />
-      <created>1694955958001</created>
+      <changelist id="86d76216-ebd0-47be-bfe8-803456c66b07" name="Changes" comment="" />
+      <created>1694540148407</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1694955958001</updated>
-      <workItem from="1694955959507" duration="10923000" />
-      <workItem from="1695102082208" duration="7675000" />
+      <updated>1694540148407</updated>
+      <workItem from="1694540149907" duration="783000" />
+      <workItem from="1694855846875" duration="18958000" />
+      <workItem from="1694935546365" duration="8596000" />
+      <workItem from="1694957237559" duration="5516000" />
+      <workItem from="1695056080445" duration="4400000" />
+      <workItem from="1695062668031" duration="488000" />
+      <workItem from="1695469327217" duration="6408000" />
+      <workItem from="1695542634664" duration="3280000" />
+      <workItem from="1695566991532" duration="617000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
 </project>

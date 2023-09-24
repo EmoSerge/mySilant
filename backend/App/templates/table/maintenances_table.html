@@ -1,0 +1,40 @@
+<table id='maintenances_table' class='tabs_table'>
+    <tbody>
+        <th>Техника</th>
+        <th>Вид ТО</th>
+        <th>Дата проведения ТО</th>
+        <th>Наработка, м/час</th>
+        <th>№ заказ наряда</th>
+        <th>Дата заказ-наряда</th>
+        <th>Организация, проводившая ТО</th>
+        <th>Сервисная компания</th>
+        {% for maintenance in maintenances %}
+            <tr>
+                <td>
+                    {{ maintenance.machine_id}}
+                </td>
+                <td>
+                    {{ maintenance.typeOfMaintenance}}
+                </td>
+                <td>
+                    {{ maintenance.dateOfMaintenance}}
+                </td>
+                <td>
+                    {{ maintenance.operatingTime}}
+                </td>
+                <td>
+                    {{ maintenance.numberOrderWork}}
+                </td>
+                <td>
+                    {{ maintenance.dateOrderWork}}
+                </td>
+                <td>
+                    {{ maintenance.maintenanceServiceCompany.first_name}}
+                </td>
+                <td>
+                    {{ maintenance.serviceCompany.first_name}}
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>

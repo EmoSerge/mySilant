@@ -1,0 +1,48 @@
+<table id='machines_table' class='tabs_table'>
+    <tbody>
+        <th>Техника</th>
+        <th>Заводской номер <br> техники</th>
+        <th>Двигатель</th>
+        <th>Заводской номер <br> двигателя</th>
+        <th>Трансмиссия</th>
+        <th>Заводской номер <br> трансмиссии</th>
+        <th>Ведущий мост</th>
+        <th>Заводской номер <br> ведущего моста</th>
+        <th>Управляемый мост</th>
+        <th>Заводской номер <br> управляемого моста</th>
+        {% for machine in machines %}
+            <tr>
+                <td>
+                    {{machine.modelOfMachine}}
+                </td>
+                <td>
+                    {{machine.factoryNumberOfMachine}}
+                </td>
+                <td>
+                    {{machine.modelOfEngine}}
+                </td>
+                <td>
+                    {{machine.factoryNumberOfEngine}}
+                </td>
+                <td>
+                    {{machine.modelOfTransmission}}
+                </td>
+                <td>
+                    {{machine.factoryNumberOfTransmission}}
+                </td>
+                <td>
+                    {{machine.modelOfMainAxle}}
+                </td>
+                <td>
+                    {{machine.factoryNumberOfMainAxle}}
+                </td>
+                <td>
+                    {{machine.modelOfSteeringAxle}}
+                </td>
+                <td>
+                    {{machine.factoryNumberOfSteeringAxle}}
+                </td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>

@@ -1,0 +1,160 @@
+@font-face {
+    font-family: Astra;
+    src: url('../fonts/PT-Astra-Sans_Regular.ttf');
+}
+
+:root {
+    --main_color: #163E6C;
+    --secondary_color: #D20A11;
+    --bg_color: #EBE6D6;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Astra;
+    /* background-color: var(--bg_color); */
+}
+
+header {
+    padding: 10px 0;
+}
+
+.container {
+    display: block;
+    margin: 0 auto;
+    width: 1200px;
+}
+
+.logo > a > img {
+    width: 300px;
+}
+
+.auth {
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+}
+
+.authForm {
+    width: min-content;
+    margin: 50px auto;
+}
+
+.authForm > form > .auth_btn  {
+    width: 200px;
+}
+
+#factoryNumberInput, #id_login, #id_password {
+    padding: 10px 15px;
+    border-radius: 15px;
+}
+
+#id_login, #id_password {
+    margin-bottom: 10px;
+}
+
+#factoryNumberButton {
+    padding: 10px 25px;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: var(--main_color);
+    color: aliceblue;
+    line-height: 1;
+}
+
+.auth_btn {
+    line-height: 2.5;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: var(--main_color);
+    color: aliceblue;
+    padding: 5px 25px;
+    border-radius: 15px;
+}
+
+.search_form {
+    display: block;
+    margin: 30px 0;
+}
+
+.result_table {
+    overflow-x: scroll;
+    overflow-y: hidden;
+}
+
+.result_table > table, .tabs_table {
+    width: 100%;
+    font-size: 14px;
+}
+
+.result_table > table, tr, td, th, .tabs_table, .tabs_table > tbody {
+    border: 1px solid #000000;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 4px 2px;
+}
+
+.auth_role {
+    margin:60px 0;
+    text-align: center;
+    font-size: 30px;
+    border-bottom: #000000 1px solid;
+}
+
+.tabs_header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: #000000 1px solid;
+    border-bottom: none;
+
+}
+
+.tabs_header input {
+    display: none;
+}
+
+.tabs_header label {
+    width: 100%;
+    padding: 20px 0;
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    border-bottom: #000000 1px solid;
+}
+
+.tabs_header label:hover {
+    background-color: var(--bg_color);
+}
+
+.tabs_header input[type="radio"]:checked + label {
+    background-color: var(--main_color);
+    color: var(--bg_color);
+    border-bottom: none;
+}
+
+
+.phantom {
+    margin-top: 15px;
+    height: 84px;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+}
+
+footer > .wrapper {
+    display: block;
+    text-align: center;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

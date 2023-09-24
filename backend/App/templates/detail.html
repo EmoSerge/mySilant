@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+<div class="container">
+    {{ item }}
+    {{ type }}
+    <img src={% static 'images/diz_dvigatel.jpg' %} alt="engine">
+</div>
+{% endblock body %}

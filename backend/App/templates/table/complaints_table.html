@@ -1,0 +1,49 @@
+<table id='compliants_table' class='tabs_table'>
+    <tbody>
+        <th>Техника</th>
+        <th>дата отказа</th>
+        <th>Наработка, <br> м/час</th>
+        <th>узел отказа</th>
+        <th>Описание отказа</th>
+        <th>Способ восстановления</th>
+        <th>Время простоя</th>
+        <th>Используемые запасные части</th>
+        <th>Дата восстановления</th>
+        <th>Сервисная компания</th>
+        {% for complaint in complaints %}
+            <tr>    
+                <td>
+                    {{ complaint.machine }}
+                </td>
+                <td>
+                    {{ complaint.dateOfFailure }}
+                </td>
+                <td>
+                    {{ complaint.operatingTime }}
+                </td>
+                <td>
+                    {{ complaint.descriptionOfFailure }}
+                </td>
+                <td>
+                    {{ complaint.usedSpareParts }}
+                </td>
+                <td>
+                    {{ complaint.dateOfRecovery }}
+                </td>
+                <td>
+                    {{ complaint.downtimeOfMachine }}
+                </td>
+                <td>
+                    {{ complaint.nodeOfFailure }}
+                </td>
+                <td>
+                    {{ complaint.recoveryMethod }}
+                </td>
+                <td>
+                    {{ complaint.serviceCompany.first_name }}
+                </td>
+
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>

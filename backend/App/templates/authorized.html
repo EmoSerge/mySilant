@@ -1,0 +1,29 @@
+
+{% block body %}
+{% load static %}
+<div class="container">
+    <h3>
+        Информация о комплектации и технических характеристиках Вашей техники
+    </h3>
+
+    <div class="tabs">
+        <div class="tabs_header">
+            <input type="radio" id="gen_info" name="tabs_buttons" checked>
+            <label for="gen_info">Общая Информация</label>
+            <input type="radio" id="TO" name="tabs_buttons">
+            <label for="TO">ТО</label>
+            <input type="radio" id="complaints" name="tabs_buttons">
+            <label for="complaints">Рекламация</label>
+        </div>
+        <div class="tabs_content">
+            
+                
+             {% include 'table/machines_table.html' %}
+             {% include 'table/maintenances_table.html' %}
+             {% include 'table/complaints_table.html' %}
+        
+        </div>
+    </div>
+</div>
+<script src="{% static 'js/authorized.js' %}"></script>
+{% endblock body %}

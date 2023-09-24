@@ -1,0 +1,7 @@
+table, tbody, th, tr, td {
+    border: 1px solid var(--main_color);
+    padding: 5px;
+    text-align: center;
+    font-size: 12px;
+    font-family: 'Astra';
+}
