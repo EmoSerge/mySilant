@@ -6,7 +6,7 @@ from Account.models import User
 
 class Machine(models.Model):
     factoryNumberOfMachine = models.CharField(unique=True, primary_key=True, max_length=128, verbose_name='Зав. № машины')
-    modelOfMachine = models.ForeignKey(ModelOfMachine, verbose_name='Модель техники', related_name='handbook_modelOfMachine', on_delete=models.CASCADE)
+    modelOfMachine = models.ForeignKey(ModelOfMachine, verbose_name='Модель машины', related_name='handbook_modelOfMachine', on_delete=models.CASCADE)
     modelOfEngine = models.ForeignKey(ModelOfEngine, verbose_name='Модель двигателя', related_name='handbook_modelOfEngine', on_delete=models.CASCADE)
     factoryNumberOfEngine = models.CharField(max_length=128, verbose_name='Зав. № двигателя')
     modelOfTransmission = models.ForeignKey(ModelOfTransmission, verbose_name='Модель трансмиссии', related_name='handbook_modelOfTransmission', on_delete=models.CASCADE)
@@ -15,20 +15,19 @@ class Machine(models.Model):
     factoryNumberOfMainAxle = models.CharField(max_length=128, verbose_name='Зав. № ведущего моста')
     modelOfSteeringAxle = models.ForeignKey(ModelOfSteeringAxle, verbose_name='Модель управляемого моста', related_name='handbook_modelOfSteeringAxle', on_delete=models.CASCADE)
     factoryNumberOfSteeringAxle = models.CharField(max_length=128, verbose_name='Зав. № управляемого моста')
-    supplyContract = models.CharField(max_length=128, verbose_name='Договор поставки №, дата')
+    supplyContract = models.CharField(max_length=128, verbose_name='Договор поставки №')
     dateOfShipment = models.DateField(verbose_name='Дата отгрузки с завода')
     consumer = models.CharField(max_length=128, verbose_name='Грузополучатель')
     operationAddress = models.CharField(max_length=128, verbose_name='Адрес поставки')
     additionalOptions = models.TextField(verbose_name='Доп. опции', blank=True)
-    client = models.ForeignKey(User, verbose_name='Клиент', related_name='handbook_client', on_delete=models.CASCADE)
+    client = models.ForeignKey(User, verbose_name='Покупатель', related_name='handbook_client', on_delete=models.CASCADE)
     serviceCompany = models.ForeignKey(User, verbose_name='Сервисная компания', related_name='machine_serviceCompany', on_delete=models.CASCADE)
     
     class Meta:
         verbose_name = 'Машина'
         verbose_name_plural = 'Машины'
         ordering = ['-dateOfShipment']
-        
-    
+
     def __str__(self):
         return self.factoryNumberOfMachine
 

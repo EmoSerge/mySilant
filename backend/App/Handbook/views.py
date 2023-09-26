@@ -5,7 +5,92 @@ from rest_framework.permissions import IsAuthenticated
 from MainApp.serializers import *
 from .serializers import *
 from .models import *
-# Create your views here.
+from drf_yasg.utils import swagger_auto_schema
+from rest_framework import serializers, status
+from rest_framework_simplejwt.views import (
+    TokenBlacklistView,
+    TokenObtainPairView,
+    TokenRefreshView,
+    TokenVerifyView,
+)
+
+
+class TokenObtainPairResponseSerializer(serializers.Serializer):
+    access = serializers.CharField()
+    refresh = serializers.CharField()
+
+    def create(self, validated_data):
+        raise NotImplementedError()
+
+    def update(self, instance, validated_data):
+        raise NotImplementedError()
+
+
+class DecoratedTokenObtainPairView(TokenObtainPairView):
+    @swagger_auto_schema(
+        responses={
+            status.HTTP_200_OK: TokenObtainPairResponseSerializer,
+        }
+    )
+    def post(self, request, *args, **kwargs):
+        return super().post(request, *args, **kwargs)
+
+
+class TokenRefreshResponseSerializer(serializers.Serializer):
+    access = serializers.CharField()
+
+    def create(self, validated_data):
+        raise NotImplementedError()
+
+    def update(self, instance, validated_data):
+        raise NotImplementedError()
+
+
+class DecoratedTokenRefreshView(TokenRefreshView):
+    @swagger_auto_schema(
+        responses={
+            status.HTTP_200_OK: TokenRefreshResponseSerializer,
+        }
+    )
+    def post(self, request, *args, **kwargs):
+        return super().post(request, *args, **kwargs)
+
+
+class TokenVerifyResponseSerializer(serializers.Serializer):
+    def create(self, validated_data):
+        raise NotImplementedError()
+
+    def update(self, instance, validated_data):
+        raise NotImplementedError()
+
+
+class DecoratedTokenVerifyView(TokenVerifyView):
+    @swagger_auto_schema(
+        responses={
+            status.HTTP_200_OK: TokenVerifyResponseSerializer,
+        }
+    )
+    def post(self, request, *args, **kwargs):
+        return super().post(request, *args, **kwargs)
+
+
+class TokenBlacklistResponseSerializer(serializers.Serializer):
+    def create(self, validated_data):
+        raise NotImplementedError()
+
+    def update(self, instance, validated_data):
+        raise NotImplementedError()
+
+
+class DecoratedTokenBlacklistView(TokenBlacklistView):
+    @swagger_auto_schema(
+        responses={
+            status.HTTP_200_OK: TokenBlacklistResponseSerializer,
+        }
+    )
+    def post(self, request, *args, **kwargs):
+        return super().post(request, *args, **kwargs)
+
 
 class ModelOfMachineViewSet(viewsets.ModelViewSet):
     permission_classes = (IsAuthenticated,)
@@ -14,6 +99,9 @@ class ModelOfMachineViewSet(viewsets.ModelViewSet):
 
     def get_queryset(self):
         user = self.request.user
+        if user.is_anonymous:
+            response = {'message': 'Требуется авторизация'}
+            return Response(response, HTTP_401_UNAUTHORIZED)
         if user.users.role == 'MR' or user.is_superuser:
             return ModelOfMachine.objects.all()
         
@@ -25,8 +113,8 @@ class ModelOfMachineViewSet(viewsets.ModelViewSet):
             machines = Machine.objects.filter(client = user)
             return ModelOfMachine.objects.filter(machine__in = machines)
             
-        response = {'message': 'Требуется авторизация'}
-        return Response(response, HTTP_401_UNAUTHORIZED)
+
+
 
 class ModelOfEngineViewSet(viewsets.ModelViewSet):
     permission_classes = (IsAuthenticated,)

@@ -3,5 +3,6 @@ table, tbody, th, tr, td {
     padding: 5px;
     text-align: center;
     font-size: 12px;
-    font-family: 'Astra';
+    font-family: 'Astra', sans-serif;
+
 }

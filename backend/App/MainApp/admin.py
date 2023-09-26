@@ -4,7 +4,7 @@ from .models import *
 # Register your models here.
 class MaintenanceAdmin(admin.ModelAdmin):
     fields = ['machine', 'typeOfMaintenance', 'dateOfMaintenance', 'operatingTime', 'numberOrderWork', 'dateOrderWork', 'maintenanceServiceCompany', 'serviceCompany']
-    list_display = ['machine', 'typeOfMaintenance', 'maintenance_made', 'service_Company']
+    list_display = ['machine', 'typeOfMaintenance', 'maintenance_made', 'service_Company', 'numberOrderWork',]
     
     def maintenance_made(self, obj):
         
@@ -30,10 +30,12 @@ class MachineAdmin(admin.ModelAdmin):
     def get_fields(self, request, obj):
         print(request)
         return super().get_fields(request, obj)
-    
+
+    @admin.display(description='Клиент')
     def get_client(self, obj):
         return obj.client.first_name
-    
+
+    @admin.display(description='Сервисная компания')
     def get_serviceCompany(self, obj):
         return obj.serviceCompany.first_name
 

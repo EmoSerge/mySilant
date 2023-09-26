@@ -8,6 +8,8 @@ from django.db.models import Q
 import json
 from datetime import datetime
 
+from rest_framework import serializers, status
+
 
 class MachineViewSet(viewsets.ModelViewSet):
     permission_classes = (DjangoModelPermissionsOrAnonReadOnly,)
@@ -43,7 +45,9 @@ class MachineViewSet(viewsets.ModelViewSet):
             
     def get_queryset(self):
         user = self.request.user
-        if user.users.role == 'CR':
+        if user.is_anonymous:
+            return Machine.objects.all()
+        elif user.users.role == 'CR':
             return Machine.objects.filter(client=user)
         elif user.users.role == 'SC':
             return Machine.objects.filter(serviceCompany=user)
@@ -81,7 +85,9 @@ class MaintenanceViewSet(viewsets.ModelViewSet):
     
     def get_queryset(self):
         user = self.request.user
-        if user.is_superuser or user.users.role == 'MR':
+        if user.is_anonymous:
+            return ''
+        elif user.is_superuser or user.users.role == 'MR':
             return Maintenance.objects.all()
         elif user.users.role == 'CR':
             machine = Machine.objects.filter(client=user)
@@ -116,7 +122,9 @@ class ComplaintsViewSet(viewsets.ModelViewSet):
     
     def get_queryset(self):
         user = self.request.user
-        if user.is_superuser or user.users.role == 'MR':
+        if user.is_anonymous:
+            return ''
+        elif user.is_superuser or user.users.role == 'MR':
             return Complaints.objects.all()
         elif user.users.role == 'CR':
             machine = Machine.objects.filter(client=user)
