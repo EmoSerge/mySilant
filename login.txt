@@ -1,16 +1,20 @@
 login:password
+------------------------
+
+admin:admin
+------------------------
 
 manager
 
 manager:silant123
-------------------
+------------------------
 
 service organization
 
 ooopromtech:silant123
 ooofns:silant123
 ooosilant:silant123
---------------------
+------------------------
 
 client
 
@@ -21,4 +25,4 @@ ooofpk21:silant123
 ooomns77:silant123
 oookomplekt:silant123
 ooormk:silant123
--------------------
+------------------------

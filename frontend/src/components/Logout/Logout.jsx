@@ -1,5 +1,5 @@
 import React from "react";
-import { CustomContainer } from "../CustomComponents/CustomContainer/CustomContainer";
+import { CustomContainer } from "../CustomComponents/CustomContainer";
 import { Button, ThemeProvider } from "@mui/material";
 import { theme } from "../../Theme/Theme";
 import { useDispatch } from "react-redux";
@@ -12,7 +12,7 @@ import { machineClear } from "../../Store/Slicers/MachineSlicer";
 import { maintenanceClear } from "../../Store/Slicers/MaintenanceSlicer";
 import { userInfoClear } from "../../Store/Slicers/UserInfoSlicer";
 
-const LogoutPage = () => {
+const Logout = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
@@ -41,4 +41,4 @@ const LogoutPage = () => {
     );
 };
 
-export { LogoutPage };
+export { Logout };

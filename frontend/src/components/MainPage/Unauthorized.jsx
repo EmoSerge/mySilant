@@ -1,5 +1,5 @@
 import React from "react";
-import { CustomContainer } from "../CustomComponents/CustomContainer/CustomContainer";
+import { CustomContainer } from "../CustomComponents/CustomContainer";
 import { Button, Input, Table, ThemeProvider } from "@mui/material";
 import { theme } from "../../Theme/Theme";
 import { useDispatch, useSelector } from "react-redux";
@@ -10,7 +10,7 @@ function Unauthorized() {
     let message = '';
     const dispatch = useDispatch();
     const data = useSelector((state) => state.machine);
-    // const {status, error, success} = useSelector((state) => state.machine);
+
 
     const submit = () => {
         const machine = document.getElementById("factoryNumberOfMachine").value;
@@ -28,12 +28,12 @@ function Unauthorized() {
     
     return (
         <CustomContainer>
-            <h1 style={{ textAlign: "center" }}>
-                Проверьте комплектацию и технические характеристики техники
-                Силант
+            <h1 style={{ textAlign: "center",
+                color: "var(--main_color)"}}>
+                Проверьте комплектацию и технические характеристики техники Силант
             </h1>
             <hr />
-            <div style={{ margin: "30px 0" }}>
+            <div style={{ textAlign: "center", margin: "30px 0" }}>
                 <Input
                     type="text"
                     placeholder="Зав. № техники"
@@ -41,7 +41,7 @@ function Unauthorized() {
                 />
                 <ThemeProvider theme={theme}>
                     <Button
-                        style={{ marginLeft: "10px" }}
+                        style={{ textAlign: "center", marginLeft: "10px" }}
                         onClick={() => {
                             submit();
                         }}
@@ -50,7 +50,8 @@ function Unauthorized() {
                     </Button>
                 </ThemeProvider>
             </div>
-            <h3 style={{ textAlign: "center" }}>
+            <h3 style={{ textAlign: "center",
+                color: "var(--main_color)"}}>
                 Информация о комплектации и технических характеристиках Вашей
                 техники
             </h3>

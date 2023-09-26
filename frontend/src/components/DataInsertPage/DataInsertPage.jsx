@@ -4,7 +4,7 @@ import { AddMachine } from "./AddMachine";
 import { Button } from "@mui/material";
 import { AddMaintenance } from "./AddMaintenance";
 import { AddComplaints } from "./AddComplaints";
-import { CustomContainer } from "../CustomComponents/CustomContainer/CustomContainer";
+import { CustomContainer } from "../CustomComponents/CustomContainer";
 
 const DataInsertPage = () => {
     const navigate = useNavigate();

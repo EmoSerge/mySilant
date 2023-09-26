@@ -1,7 +1,7 @@
 import { useMediaQuery, useTheme } from "@mui/material";
 import * as React from "react";
 
-const GenInfoFilters = () => {
+const InfoFilters = () => {
     const queryTheme = useTheme();
     const query_md = useMediaQuery(queryTheme.breakpoints.down("md"));
     
@@ -124,4 +124,4 @@ const GenInfoFilters = () => {
     );
 };
 
-export { GenInfoFilters };
+export { InfoFilters };

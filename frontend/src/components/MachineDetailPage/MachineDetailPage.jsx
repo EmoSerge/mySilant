@@ -4,7 +4,7 @@ import { DetailTable } from "./DetailTable/DetailTable";
 import { useDispatch, useSelector } from "react-redux";
 import { DetailedData } from "../../Store/Slicers/DetailedSlicer";
 import { Button } from "@mui/material";
-import { CustomContainer } from "../CustomComponents/CustomContainer/CustomContainer";
+import { CustomContainer } from "../CustomComponents/CustomContainer";
 
 const MachineDetailPage = () => {
     const params = useParams();

@@ -2,6 +2,7 @@ import * as React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
 import {
+    MachineListData,
     EngineData,
     MainAxleData,
     MethodOfRecoveryData,
@@ -11,7 +12,7 @@ import {
     TypeOfMaintenanceData,
     UsersData,
 } from "../../Store/Slicers/HandbookSlicer";
-import { CustomContainer } from "../CustomComponents/CustomContainer/CustomContainer";
+import { CustomContainer } from "../CustomComponents/CustomContainer";
 import { Button, ThemeProvider } from "@mui/material";
 import { theme } from "../../Theme/Theme";
 
@@ -26,6 +27,10 @@ const Handbook = () => {
     const user = useSelector((state) => state.user);
 
     React.useEffect(() => {
+        if (key === "machinelist") {
+            dispatch(MachineListData(id));
+        }
+
         if (key === "engine") {
             dispatch(EngineData(id));
         }
@@ -61,7 +66,13 @@ const Handbook = () => {
 
     return (
         <CustomContainer style={{ textAlign: "center" }}>
-            {handbook.success && key === "engine" ? (
+            { handbook.success && key === "machinelist" ? (
+                    <>
+                        <h1>{handbook.machinelist.title}</h1>
+                        <h3>{handbook.machinelist.description}</h3>
+                    </>
+            )
+              :  handbook.success && key === "engine" ? (
                 <>
                     <h1>{handbook.engine.title}</h1>
                     <h3>{handbook.engine.description}</h3>

@@ -3,29 +3,39 @@
   <component name="ChangeListManager">
     <list default="true" id="86d76216-ebd0-47be-bfe8-803456c66b07" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Account/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/App/Account/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Account/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/App/Account/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Account/signals.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Account/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/App/Account/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/App/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/App/App/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/App/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/App/App/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Handbook/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/App/Handbook/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Handbook/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/App/Handbook/apps.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Handbook/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/App/Handbook/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Handbook/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/App/Handbook/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Handbook/tests.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Handbook/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/App/Handbook/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/MainApp/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/App/MainApp/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/MainApp/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/App/MainApp/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/MainApp/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/App/MainApp/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/MainApp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/App/MainApp/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/App/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/static/images/Logotype accent RGB 1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/static/images/Logotype accent RGB 2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/static/images/Logotype accent RGB 3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/static/images/diz_dvigatel.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/app/src/components/Login/Login.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/app/src/components/Logout/Logout.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/app/src/components/MainPage/MainPageTable/Filters/InfoFilters.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../frontend/app/src/components/MainPage/MainPageTable/Tabs/Info.jsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../login.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../login.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/Store/Slicers/MainBridgeSlicer.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/Store/Slicers/SteerableBridgeSlicer.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/Store/Slicers/TOSlicer.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/Store/Slicers/TechnicSlicer.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/CustomComponents/CustomContainer/CustomContainer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/CustomComponents/CustomContainer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/CustomContainer/CustomContainer.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/DataB/DataB.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/DataInsertPage/DataInsertPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/DataInsertPage/DataInsertPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/Footer/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/Footer/Footer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/Handbook/Handbook.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/Handbook/Handbook.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/Header/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/Header/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/LoginPage/LoginPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/Login/Login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/LogoutPage/LogoutPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/Logout/Logout.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/MachineDetailPage/MachineDetailPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/MachineDetailPage/MachineDetailPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/MainPage/Authorized.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/MainPage/Authorized.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/MainPage/MainPageTable/Filters/GenInfoFilters.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/MainPage/MainPageTable/Filters/InfoFilters.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/MainPage/MainPageTable/MainPageTable.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/MainPage/MainPageTable/MainPageTable.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/MainPage/MainPageTable/Tabs/GenInfo.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/MainPage/MainPageTable/Tabs/Info.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/components/MainPage/Unauthorized.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/src/components/MainPage/Unauthorized.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/reportWebVitals.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/src/setupTests.js" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,13 +61,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "nodejs_package_manager_path": "npm"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration default="true" type="DjangoTestsConfigurationType">
       <module name="backend" />
@@ -226,6 +237,7 @@
       <workItem from="1695542634664" duration="3280000" />
       <workItem from="1695566991532" duration="2679000" />
       <workItem from="1695651690968" duration="7018000" />
+      <workItem from="1695739164179" duration="6054000" />
     </task>
     <servers />
   </component>

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { CustomContainer } from "../CustomComponents/CustomContainer/CustomContainer";
+import { CustomContainer } from "../CustomComponents/CustomContainer";
 import {
     Button,
     IconButton,
@@ -72,7 +72,7 @@ const Header = () => {
                 <div style={{ width: "100%", textAlign: "center" }}>
                     <a href="/">
                         <img
-                            src="http://127.0.0.1:8000/static/images/logo.png"
+                            src="http://127.0.0.1:8000/static/images/logo.svg"
                             alt="Logo"
                             style={{ width: "150px" }}
                         />
@@ -90,11 +90,7 @@ const Header = () => {
                             flexDirection: "column",
                         }}
                     >
-                        <p style={{ fontSize: "18px" }}>
-                            {!userInfo.loading && userInfo.success
-                                ? userInfo.data[0].first_name
-                                : "Загрузка"}{" "}
-                        </p>
+
 
                         <ThemeProvider theme={theme}>
                             <Button
@@ -130,8 +126,9 @@ const Header = () => {
                         </ThemeProvider>
                     </div>
                 )}
-                <div style={{ display: "block" }}>
-                    <p>+7-8352-20-12-09, telegram</p>
+                <div style={{ display: "block",
+                    color: "var(--main_color)"}}>
+                    <p>Электронная сервисная книжка "Мой Силант"</p>
                 </div>
             </div>
         </div>
@@ -164,14 +161,15 @@ const Header = () => {
                 >
                     <a href="/">
                         <img
-                            src="http://127.0.0.1:8000/static/images/logo.png"
+                            src="http://127.0.0.1:8000/static/images/logo.svg"
                             alt="Logo"
                             style={{ width: query_md ? "150px" : "300px" }}
                         />
                     </a>
                 </div>
-                <div style={{ display: query_md ? "none" : "block" }}>
-                    <p>+7-8352-20-12-09, telegram</p>
+                <div style={{ display: query_md ? "none" : "block",
+                    color: "var(--main_color)"}}>
+                    <p><h1>Электронная сервисная книжка "Мой Силант"</h1></p>
                 </div>
                 {localStorage.getItem("Authenticated") &&
                 userInfo.status !== "BAD" ? (
@@ -182,11 +180,7 @@ const Header = () => {
                             display: query_md ? "none" : "flex",
                         }}
                     >
-                        <p style={{ fontSize: "18px" }}>
-                            {!userInfo.loading && userInfo.success
-                                ? userInfo.data[0].first_name
-                                : "Загрузка"}{" "}
-                        </p>
+
 
                         <ThemeProvider theme={theme}>
                             <Button

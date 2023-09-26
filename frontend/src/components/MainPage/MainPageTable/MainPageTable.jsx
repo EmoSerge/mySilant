@@ -1,7 +1,7 @@
 import * as React from "react";
-import { GenInfo } from "../../MainPage/MainPageTable/Tabs/GenInfo";
-import { Maintenance } from "../../MainPage/MainPageTable/Tabs/Maintenance";
-import { Complaints } from "../../MainPage/MainPageTable/Tabs/Complaints";
+import { Info } from "./Tabs/Info";
+import { Maintenance } from "./Tabs/Maintenance";
+import { Complaints } from "./Tabs/Complaints";
 import { Box, Tab, Tabs } from "@mui/material";
 import PropTypes from "prop-types";
 import "./MainPageTable.css";
@@ -55,7 +55,7 @@ const MainPageTable = (props) => {
                 </Tabs>
             </Box>
             <CustomTabPanel value={value} index={0}>
-                <GenInfo machine={machine} user={user} />
+                <Info machine={machine} user={user} />
             </CustomTabPanel>
             <CustomTabPanel value={value} index={1}>
                 <Maintenance maintenance={maintenance} user={user} />

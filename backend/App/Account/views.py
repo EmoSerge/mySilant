@@ -4,8 +4,6 @@ from .serializers import UserSerializer, UsersSerializer
 from .models import User
 from django.db.models import Q
 
-# Create your views here.
-
 class UserViewSet(viewsets.ModelViewSet):
     http_method_names = ('get',)
     serializer_class = UserSerializer

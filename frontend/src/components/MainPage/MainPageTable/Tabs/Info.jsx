@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Button, IconButton, Link, Table, ThemeProvider } from "@mui/material";
-import { GenInfoFilters } from "../Filters/GenInfoFilters";
+import { InfoFilters } from "../Filters/InfoFilters";
 import { useNavigate } from "react-router-dom";
 import { theme } from "../../../../Theme/Theme";
 import { useDispatch, useSelector } from "react-redux";
@@ -8,7 +8,7 @@ import { MachineData } from "../../../../Store/Slicers/MachineSlicer";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 
-const GenInfo = () => {
+const Info = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const logged = useSelector((state) => state.user);
@@ -58,7 +58,7 @@ const GenInfo = () => {
                 <></>
             )}
 
-            <GenInfoFilters />
+            <InfoFilters />
             <div style={{ overflowX: "scroll" }}>
                 <Table>
                     <tbody>
@@ -110,7 +110,7 @@ const GenInfo = () => {
                                     <td>{idx + 1}</td>
                                     <td>
                                         <Link
-                                            href={`machine/${value.factoryNumberOfMachine}`}
+                                            href={`machinelist/${value.modelOfMachine.id}`}
                                         >
                                             {value.modelOfMachine.title}
                                         </Link>
@@ -191,4 +191,4 @@ const GenInfo = () => {
     );
 };
 
-export { GenInfo };
+export { Info };
